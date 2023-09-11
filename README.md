@@ -1,5 +1,17 @@
 # Подготовка к выполнению
 - Установите Ansible версии 2.10 или выше.
+ ```
+ ansible --version
+ansible [core 2.15.3]
+  config file = None
+  configured module search path = ['/home/devops/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python3.10/dist-packages/ansible
+  ansible collection location = /home/devops/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/local/bin/ansible
+  python version = 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0] (/usr/bin/python3)
+  jinja version = 3.0.3
+  libyaml = True
+```
 - Создайте свой публичный репозиторий на GitHub с произвольным именем.
 - Скачайте Playbook из репозитория с домашним заданием и перенесите его в свой репозиторий.
 # Основная часть
@@ -106,7 +118,7 @@ New Vault password:
 Confirm New Vault password:
 Encryption successful
 ```
-  ![vm]()
+  ![vm](https://github.com/EVolgina/asible01/blob/main/exam.PNG)
 - Запустите playbook на окружении prod.yml. При запуске ansible должен запросить у вас пароль. Убедитесь в работоспособности.
 ```
 ansible-playbook -i inventory/prod.yml site.yml --ask-vault-pass
